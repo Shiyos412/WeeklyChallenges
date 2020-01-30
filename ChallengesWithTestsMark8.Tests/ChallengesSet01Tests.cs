@@ -3,7 +3,7 @@ using Xunit;
 
 namespace ChallengesWithTestsMark8.Tests
 {
-    public class ChallengesSet01Tests
+    public class ChallengesSet01Tests 
     {
         [Theory]
         [InlineData(1, 1, true)]
@@ -25,6 +25,7 @@ namespace ChallengesWithTestsMark8.Tests
 
             // Assert
             Assert.Equal(expected, actual);
+            
         }
 
         [Theory]
