@@ -93,7 +93,6 @@ namespace ChallengesWithTestsMark8
 
             }
             string end = "";
-            string space = " ";
             for (int i = 0; i < results.Count; i++)
             {
                 if (results[i] == (""))

@@ -8,23 +8,13 @@ namespace ChallengesWithTestsMark8
     {
         public bool CharacterIsALetter(char c)
         {
-            if(((int)c > 64 && (int)c < 91) || ((int)c > 96 && (int) c < 123)){
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return char.IsLetter(c);
         }
 
         public bool CountOfElementsIsEven(string[] vals)
         {
-            int count = 0;
-            foreach (string a in vals)
-            {
-                count++;
-            }
-            if(count%2 == 0)
+            
+            if(vals.Length%2 == 0)
             {
                 return true;
             }
@@ -99,7 +89,10 @@ namespace ChallengesWithTestsMark8
                     sum += a;
                 }
             }
-            return sum;
+            //return sum;
+
+            var sum2 = numbers.Where(num => num % 2 == 0).Sum();
+            return sum2;
         }
 
         public bool IsSumOdd(List<int> numbers)
@@ -125,7 +118,7 @@ namespace ChallengesWithTestsMark8
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            if(number < 0)
+            if (number <= 0)
             {
                 return 0;
             }
